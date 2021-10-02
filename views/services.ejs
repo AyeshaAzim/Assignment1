@@ -1,21 +1,74 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Something <%= title %> yourself, <%= userName %></p>
-  </body>
-</html> -->
-
 <% include partials/header.ejs %>
-<div class="container">
-  <div class="jumbotron">
-    <h1><%= title %></h1>
-    <p>Something <%= title %> yourself, <%= userName %></p>
-  </div>
-</div>
- 
-<% include partials/footer.ejs %>
+
+
+<div class="child_div" style="background-image:url(images/img5.png);">
+<div class="form_div">
+   
+	 <div class="form_header"> 
+		<h1><%= title %> Provided</h1>
+
+		<div class="content">
+			<p>I would like to share some of the prominent projects that I have worked on :)</p>
+
+			<table class="services">
+				
+				  <td class="projServices"><img src="images/Service1.png" width="100%" height= "100%" ></td>
+				  <td style="font-size: 20px; color: #F9F3DF; border-style: none;">
+					  <h3><b>Developed a weather application</b></h3>
+					  <ul>
+						  <li>Worked with Ajax and JSON to develop a weather application that allows the user to find the weather at his current or desired locations.</li>
+						  <li>Used API keys for implmenting Google maps.</li>
+					  </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="projServices"><img src="images/Service2.png" width="100%" height= "100%"></td>
+				  <td style="font-size: 20px; color: #F9F3DF; border-style: none;">
+					<h3>Bug Smasher Canvas Game</h3>
+					Developed a bug smasher game using javascript by using a canvas-based approach, loops and multiple math libraries.</td>
+				</tr>
+				<tr>
+				  <td class="projServices"><img src="images/Service3.png" width="100%" height= "100%"></td>
+				  <td style="font-size: 20px; color: #F9F3DF; border-style: none;">
+					<h3>Windows Form Application Using C#</h3>
+				<p>Used GUI to develop a windows application form that uses an object oriented approach. This application was programmed in C#.</p>
+				</td>
+				</tr>
+				<tr>
+					<td class="projServices"><img src="images/Service4.png" width="100%" height= "100%"></td>
+					<td style="font-size: 20px; color: #F9F3DF; border-style: none;">
+					  <h3>SRS Documentation</h3>
+				  <p>Worked on developing a Software Requriement Documentation for a Smart Parking Application in collaboration with a team.</p>
+				  </td>
+				  </tr>
+				  
+			</table>
+        </div>
+        
+        <br />
+        
+
+
+
+
+
+
+		<br>
+    <br>
+    <br>
+    
+    <div class="footer">
+			<footer>
+				<p>©Copyright2021 Ayesha Azim | 301166757 | Fall 2021 | Comp229</p>
+			</footer>
+		</div>
+			
+		</div>
+		
+		
+	</div>	
+	</div>
+	
+	</div>
+
+  <% include partials/footer.ejs %>   
