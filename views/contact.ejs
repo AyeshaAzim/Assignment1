@@ -1,21 +1,53 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Something <%= title %> yourself, <%= userName %></p>
-  </body>
-</html> -->
-
 <% include partials/header.ejs %>
-<div class="container">
-  <div class="jumbotron">
-    <h1><%= title %></h1>
-    <p>Something <%= title %> yourself, <%= userName %></p>
+
+
+<div class="child_div" style="background-image:url(Assets/images/img1.png); ">
+<div class="form_div">
+	 <div class="form_header"> 
+		<h1> <%= title %></h1>
+    <h4 style="font-family: 'papyrus'; text-align: center; color: white;">Lets Connect!</h4>
+
+		<div class="content" >
+			<form method="post" action=mailto:http://centennialcollege.ca/continuingeducation>
+    
+    
+  <!--Student information-->
+      
+    <input type="text" id="name" name="name"placeholder="Enter your Full name:" required = "required" />
+    
+    <input type="email" id="email" name="email"placeholder="Enter your Email Adress" required />
+    
+    <input type="tel" id="phone" name="phone" placeholder="Enter your Mobile number" required />
+
+	<button type="button" id="Submit" value="Submit">Submit</button>
+		
+	  <br>
+
+	  <fieldset style="text-align: center; ">
+		  <p style="color: white;">Please feel free to contact me. Here are my contact details:</p>
+		  <ul style="list-style-type: none;">
+			  <li>Email: ashaik89@my.centennialcollege.ca</li>
+			  <li>Phone: (437)-235-7475</li>
+		  </ul>
+			  <br>
+	  </fieldset>
+
+		<div class="footer">
+			<footer>
+				<p>©Copyright2021 Ayesha Azim | 301166757 | Fall 2021 | Comp229</p>
+				<p><i class="fab fa-instagram"></i> &nbsp; &nbsp;&nbsp; &nbsp;<i class="fab fa-twitter"></i>&nbsp;&nbsp;&nbsp;&nbsp; <i class="fab fa-facebook"></i></p>
+			</footer>
+		</div>
+    </div>
+	</div>	
   </div>
-</div>
- 
-<% include partials/footer.ejs %>
+  </div>
+
+    
+   
+  <% include partials/footer.ejs %>   
+
+
+
+
+

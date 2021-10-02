@@ -104,9 +104,48 @@ h3{
 
 
 
+input{
+  width:30vw;
+  height: 60px;
+  padding:12px 20px;
+  display:block;
+  box-sizing:border-box;
+  outline:none;
+  text-align:center;
+  margin:20px auto;
+  background-color: transparent;
+  color:#fff;
+  border:1px solid #fff;
+  opacity:0.8;
+  font-size:16px;
+}
+input::placeholder{
+  color:#fff;
+  opacity:0.6;
+  font-size:14px;
+}
 
-
-
+button{   
+  color:#fff;
+  background:black;
+  border:1px solid white;
+  padding:10px 30px;
+  /* font-family:'DM sans'; */
+  /* font-size:14px; */
+  /* font-weight:700; */
+  letter-spacing:1px; 
+  /* text-transform:uppercase; */
+  margin:10px auto;
+  display:block;
+  transition: all 0.5s ease;
+  height: 3vw;
+}
+button:hover{
+  color:black;
+  opacity:1;
+  background:transparent;
+  transition:all 0.5s ease;
+}
 
 
 
