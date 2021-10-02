@@ -11,7 +11,7 @@ Student number: 301166757
 .child_div{
   position:relative;
   width: 100%;
-  /* height: 900px; */
+  /* height: 1900px; */
   height: fit-content;
   background-size:cover;
   background-position:center;
@@ -23,7 +23,8 @@ Student number: 301166757
 }
 .form_div{
   background-color:rgba(0,0,0,0.6);
-  width:50vw;
+  /* width:50vw; */
+  width:55vw;
   height:100%; 
   padding-top: 30px;
 }
@@ -50,35 +51,47 @@ Student number: 301166757
       padding-left: 50px;
       padding-right: 50px;
       height: fit-content;
+      
 }
 .footer{
    font-size: 15px;
-  /*font-family: 'papyrus';
-  font-weight: 700;
-  text-align: center;
-  color: #A1CAE2;
-  margin-top: 50px;
-  bottom: auto;
-  position: absolute;
-  width: 100%; */
   position:relative;
   left: 0;
   bottom: 0;
   width: 100%;
-  /* background-color:#212529; */
   background-color:transparent;
   color: white;
   text-align: center;
 }
 
-img{
+.id{
   border-radius: 50%
 }
 
+table {
+  font-family: 'papyrus';
+  border-collapse: collapse;
+  width: 100%;
+  
+}
 
+td, th {
+  border: 6px solid white;
+  text-align: center;
+  padding: 10px;
+  
+}
 
+.proj{
+  width: 40%;
+  height: 350px;
+  background-color: black;
+}
 
-
+h3{
+  color: #FFBCBC;
+  text-decoration: underline;
+}
 
 
 
