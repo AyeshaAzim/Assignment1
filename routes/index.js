@@ -5,35 +5,31 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { 
     title: 'Home',
-    userName: 'Ayesha' });
+    userName: 'Ayesha Azim' });
 });
 
 /* GET About me page. */
 router.get('/about', function(req, res, next) {
   res.render('about', {
-     title: 'About',
-     userName: 'Ayesha' });
+     title: 'About' });
 });
 
 /* GET Projects page. */
 router.get('/projects', function(req, res, next) {
   res.render('projects', {
-     title: 'Projects',
-     userName: 'Ayesha' });
+     title: 'Projects'});
 });
 
 /* GET Services page. */
 router.get('/services', function(req, res, next) {
   res.render('services', {
-     title: 'Services',
-     userName: 'Ayesha' });
+     title: 'Services' });
 });
 
 /* GET Contact me page. */
 router.get('/contact', function(req, res, next) {
   res.render('contact', {
-     title: 'Contact me',
-     userName: 'Ayesha' });
+     title: 'Contact me' });
 });
 
 module.exports = router;

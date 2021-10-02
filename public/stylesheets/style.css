@@ -114,15 +114,16 @@ input{
   text-align:center;
   margin:20px auto;
   background-color: transparent;
-  color:#fff;
+  color:white;
   border:1px solid #fff;
   opacity:0.8;
   font-size:16px;
 }
 input::placeholder{
-  color:#fff;
+  color:white;
   opacity:0.6;
   font-size:14px;
+  font-weight: bold;
 }
 
 button{   
@@ -147,11 +148,28 @@ button:hover{
   transition:all 0.5s ease;
 }
 
+a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  
+}
 
+ul{
+  list-style-type: none;
+}
 
-
-
-
+hr{
+   border-style: none;
+   border-top-style: dotted;
+   border-width: 12px;
+   width: 25%;
+   border-color: white;
+   background-color: transparent;
+   justify-content: center;
+   margin-left: 39%;
+   position: relative;
+}
 
 
   
