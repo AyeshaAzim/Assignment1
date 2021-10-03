@@ -1,9 +1,13 @@
 {
   "name": "assignment1",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./server.js"
+  },
+  "engines": {
+    "node": "^14.18.0",
+    "npm": "^7.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
@@ -17,5 +21,18 @@
     "jquery": "^3.6.0",
     "morgan": "~1.9.1",
     "npm": "^7.24.1"
-  }
+  },
+  "description": "Assignment 1",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AyeshaAzim/Assignment1.git"
+  },
+  "author": "Ayesha Azim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AyeshaAzim/Assignment1/issues"
+  },
+  "homepage": "https://github.com/AyeshaAzim/Assignment1#readme"
 }
