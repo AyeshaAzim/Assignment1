@@ -1,20 +1,28 @@
+<!--Author Name: Ayesha Mohammed Azim
+Student number: 301166757
+Date: 2 October 2021-->
+
 <% include partials/header.ejs %>
 
-
-<div class="child_div" style="background-image:url(Assets/images/img9.png);">
-<div class="form_div">
+<div class="main_div" style="background-image:url(Assets/images/img9.png);">
+<div class="container_div">
    
-	 <div class="form_header"> 
+	<!-- Customized header -->
+	 <div class="container_header"> 
 		<h1>Projects Accomplished!</h1>
 
+		<!-- Page content -->
 		<div class="content">
 			<p>I would like to share some of the prominent projects that I have worked on :)</p>
-
+			
+			<!-- Table to insert images of projects and their descriptions -->
 			<table>
+				<!-- Table heading -->
 				<tr>
 				  <th style="background-color:black; color: white; font-weight: bold;">Projects Implemented</th>
 				  <th style="background-color:black; color: white; font-weight: bold;">Description</th>
 				</tr>
+				<!-- Project 1 -->
 				<tr>
 				  <td class="proj"><img src="Assets/images/Project1.JPG" width="100%" height= "100%" ></td>
 				  <td style="font-size: 20px; color: #F9F3DF;">
@@ -25,42 +33,59 @@
 					  </ul>
 				  </td>
 				</tr>
+				<!-- Project 2 -->
 				<tr>
 				  <td class="proj"><img src="Assets/images/Project2.JPG" width="100%" height= "100%"></td>
 				  <td style="font-size: 20px; color: #F9F3DF;">
 					<h3>Bug Smasher Canvas Game</h3>
-					Developed a bug smasher game using javascript by using a canvas-based approach, loops and multiple math libraries.</td>
+					<p>Developed a bug smasher game using javascript by using a canvas-based approach, loops and multiple math libraries.</p>
+				  </td>
 				</tr>
+				<!-- Project 3 -->
 				<tr>
 				  <td class="proj"><img src="Assets/images/Project3.JPG" width="100%" height= "100%"></td>
 				  <td style="font-size: 20px; color: #F9F3DF;">
 					<h3>Windows Form Application Using C#</h3>
-				<p>Used GUI to develop a windows application form that uses an object oriented approach. This application was programmed in C#.</p>
+					<p>Used GUI to develop a windows application form that uses an object oriented approach. This application was programmed in C#.</p>
 				</td>
 				</tr>
+				<!-- Project 4 -->
 				<tr>
 					<td class="proj"><img src="Assets/images/Project4.JPG" width="100%" height= "100%"></td>
 					<td style="font-size: 20px; color: #F9F3DF;">
-					  <h3>SRS Documentation</h3>
-				  <p>Worked on developing a Software Requriement Documentation for a Smart Parking Application in collaboration with a team.</p>
-				  </td>
-				  </tr>
-				  
+						<h3>SRS Documentation</h3>
+					  	<p>Worked on developing a Software Requriement Documentation for a Smart Parking Application in collaboration with a team.</p>
+						  <p>Here is the link to my srs Documentation:
+							<br>
+							<a href="https://drive.google.com/file/d/1J_hjth4DGmrK9rk1JyT1wrP4iv75H9Gd/view" style="font-size: 20px;">SRS for iPark</a>
+						</p>
+				  	</td>
+				</tr>	
+				<!-- Project 5 -->
+				<tr>
+					<td class="proj"><img src="Assets/images/Project5.JPG" width="100%" height= "100%"></td>
+					<td style="font-size: 20px; color: #F9F3DF;">
+						<h3>BMR Calculator</h3>
+					  	<p>Designed and coded a BMR calculator using javascript that calculates an individuals BMR by accepting their respective heights and weights as an input</p>
+						
+				  	</td>
+				</tr>				  
 			</table>
 			<br>
+			<!-- Customized foorter -->
 			<div class="footer">
 				<footer>
 					<p>©Copyright2021 Ayesha Azim | 301166757 | Fall 2021 | Comp229</p>
 				</footer>
 			</div>
-        </div>	
-		</div>	
-	</div>	
-	</div>
-	
-	</div>
 
-  <% include partials/footer.ejs %>   
+        </div>	
+	</div>	
+	</div>	
+</div>
+</div>
+
+<% include partials/footer.ejs %>   
 
 
 

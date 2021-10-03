@@ -1,60 +1,57 @@
-/* .contain{
-  padding-left: 50px;
-  
-} */
-
-
-/**Author Name: Ayesha Mohammed Azim
+/**
+Author Name: Ayesha Mohammed Azim
 Student number: 301166757
+Date: 2 October 2021
 **/
 
-.child_div{
+.main_div{
   position:relative;
   width: 100%;
-  /* height: 1900px; */
   height: fit-content;
   background-size:cover;
   background-position:center;
-  /* background-attachment: fixed; */
   position: relative;
   display:flex;
   align-items:center;
   justify-content:center;
 }
-.form_div{
+
+.container_div{
   background-color:rgba(0,0,0,0.6);
-  /* width:50vw; */
   width:55vw;
   height:100%; 
   padding-top: 30px;
 }
-.form_header h1
-  {
-      font-size: 50px;
-      font-family: 'papyrus';
-      font-weight: 700;
-      text-align: center;
-      color: #dfdfdf;
-      line-height: 100px;
-      /* text-transform: uppercase; */
-      padding: 0px;
-      height: fit-content;
+
+/* Styling the header */
+.container_header h1{
+  font-size: 50px;
+  font-family: 'papyrus';
+  font-weight: 700;
+  text-align: center;
+  color: #dfdfdf;
+  line-height: 100px;
+  padding: 0px;
+  height: fit-content;
   }	
+
+/* Styling the elements of the main container */
 .content{
-      font-size: 25px;
-      font-family: 'papyrus';
-      font-weight: 700;
-      text-align: center;
-      color: #A1CAE2;
-      line-height: 50px;
-      margin: 30px;
-      padding-left: 50px;
-      padding-right: 50px;
-      height: fit-content;
+  font-size: 25px;
+  font-family: 'papyrus';
+  font-weight: 700;
+  text-align: center;
+  color: #A1CAE2;
+  line-height: 50px;
+  margin: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: fit-content;
       
 }
+/* Styling the customized footer on each page */
 .footer{
-   font-size: 15px;
+  font-size: 15px;
   position:relative;
   left: 0;
   bottom: 0;
@@ -64,25 +61,25 @@ Student number: 301166757
   text-align: center;
 }
 
+/* Styling my image on about page by rounding the borders */
 .id{
   border-radius: 50%
 }
 
+/* Styling the table used in projects and services */
 table {
   font-family: 'papyrus';
   border-collapse: collapse;
   width: 100%;
-  
-  
 }
 
 td, th {
   border: 5px solid white;
   text-align: center;
   padding: 10px;
-  
 }
 
+/* Styling data of tr in projects page */
 .proj{
   width: 30%;
   height: 30%;
@@ -94,6 +91,7 @@ h3{
   text-decoration: underline;
 }
 
+/* Styling data of tr in services page */
 .projServices{
   width: 20%;
   height: 10%;
@@ -101,9 +99,7 @@ h3{
   border-style: none;
 }
 
-
-
-
+/* Styling input in the form used in contact me page */
 input{
   width:30vw;
   height: 60px;
@@ -126,20 +122,17 @@ input::placeholder{
   font-weight: bold;
 }
 
+/* Styling button used in contact me page */
 button{   
   color:#fff;
   background:black;
   border:1px solid white;
-  padding:10px 30px;
-  /* font-family:'DM sans'; */
-  /* font-size:14px; */
-  /* font-weight:700; */
+  padding:0px 30px; 
   letter-spacing:1px; 
-  /* text-transform:uppercase; */
   margin:10px auto;
   display:block;
   transition: all 0.5s ease;
-  height: 3vw;
+  height: 2.5vw;
 }
 button:hover{
   color:black;
@@ -148,27 +141,29 @@ button:hover{
   transition:all 0.5s ease;
 }
 
+/* Styling links */
 a {
   color: white;
   background-color: transparent;
   text-decoration: none;
-  
 }
 
+/* Styling unorder lists */
 ul{
   list-style-type: none;
 }
 
+/* styling horizontal lines in dotted form */
 hr{
-   border-style: none;
-   border-top-style: dotted;
-   border-width: 12px;
-   width: 25%;
-   border-color: white;
-   background-color: transparent;
-   justify-content: center;
-   margin-left: 39%;
-   position: relative;
+  border-style: none;
+  border-top-style: dotted;
+  border-width: 12px;
+  width: 25%;
+  border-color: white;
+  background-color: transparent;
+  justify-content: center;
+  margin-left: 39%;
+  position: relative;
 }
 
 
