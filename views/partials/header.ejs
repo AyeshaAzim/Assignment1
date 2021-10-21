@@ -39,6 +39,28 @@ Date: 2 October 2021-->
       <li class="nav-item">
         <a class="nav-link" href="/contact"><i class="fas fa-mobile-alt"></i> Contact me</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/users"><i class="fas fa-mobile-alt"></i> Users</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"><i class="fas fa-mobile-alt"></i> Inventory</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="./inventory/list">Inventory List</a></li>
+          <li><a class="dropdown-item" href="./inventory/add">Add a new Item</a></li>
+        </ul>
+      </li> -->
+      <li class="nav-item dropdown">
+        <% if (title == "Inventory List" || title == "Add a new Item") { %>
+          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventory</a>
+        <% } else { %>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventory</a>
+        <% } %>       
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/inventory/list">Inventory List</a></li>
+          <li><a class="dropdown-item" href="/inventory/add">Add a new Item</a></li>
+        </ul>
+      </li>
+      
     </ul>
   </nav>
   <br>
