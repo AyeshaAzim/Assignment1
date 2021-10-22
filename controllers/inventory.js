@@ -1,24 +1,3 @@
-// //Get the model
-// let Inventory = require("../models/inventory");
-
-// module.exports.list =  function(req, res, next) {
-//     Inventory.find((err, inventoryList) => {
-//         if(err){
-//             return console.log(err)
-//         }
-//         else{
-//             console.log(`Test.....`)
-//             console.log(inventoryList);
-//         };
-        
-//     });
-
-
-//     // res.render('index', { 
-//     //   title: 'Home',
-//     //   userName: 'Ayesha Azim' });
-//         }
-
 // create a reference to the model
 
 let Inventory = require('../models/inventory');

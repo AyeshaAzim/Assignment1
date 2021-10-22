@@ -1,27 +1,22 @@
 var express = require('express');
+let usersController = require('../controllers/user')
 var router = express.Router();
 
-// /* GET users listing. */
-// router.get('/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
-
-// module.exports = router;
 /* GET users listing. */
 
 router.get('/', function(req, res, next) {  
   res.render('users', { 
     title: 'Users',
-    userName: 'Ayesha'
+    userName: req.user ? req.user.username : ''
   });
 });
 
-/* GET users listing. Available on http://localhost:3000/users/john */
-router.get('/john', function(req, res, next) {  
-  res.render('users', { 
-    title: 'Users',
-    userName: 'John'
-  });
-});
+router.get('/signup', usersController.renderSignup);
+router.post('/signup', usersController.signup);
+
+router.get('/signin', usersController.renderSignin);
+router.post('/signin', usersController.signin);
+
+router.get('/signout', usersController.signout);
 
 module.exports = router;

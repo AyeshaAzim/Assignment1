@@ -7,6 +7,7 @@
 var app = require('./config/app');
 var debug = require('debug')('assignment1:server');
 var http = require('http');
+const configurePassport = require('./config/passport');
 
 /**
  * Get port from environment and store in Express.
