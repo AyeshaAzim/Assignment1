@@ -1,6 +1,7 @@
 var express = require('express');
 let usersController = require('../controllers/user')
 var router = express.Router();
+let passport = require('passport');
 
 /* GET users listing. */
 

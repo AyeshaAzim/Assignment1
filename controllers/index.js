@@ -1,24 +1,32 @@
 exports.home =  function(req, res, next) {
     res.render('index', { 
       title: 'Home',
-      userName: 'Ayesha Azim' });
-  }
+      userName: req.user ? req.user.username : ''
+     });
+  };
 
   exports.about = function(req, res, next) {
     res.render('about', {
-       title: 'About' });
+       title: 'About',
+       userName: req.user ? req.user.username : '' });
   }
 
   exports.projects = function(req, res, next) {
     res.render('projects', {
-       title: 'Projects'});
+       title: 'Projects',
+       userName: req.user ? req.user.username : ''
+      });
   }
 
   exports.services = function(req, res, next) {
     res.render('services', {
-       title: 'Services' });
+       title: 'Services',
+       userName: req.user ? req.user.username : ''
+       });
   }
   exports.contact =  function(req, res, next) {
     res.render('contact', {
-       title: 'Contact me' });
+       title: 'Contact me',
+       userName: req.user ? req.user.username : ''
+       });
   }

@@ -17,19 +17,13 @@ let mongoose = require('mongoose')
 let dbURI = require('./db')
 
 //connect to the database
-mongoose.connect(dbURI.URI)
+mongoose.connect(dbURI.AtplasDB)
 
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error:'))
 mongoDB.once('open',()=>{
   console.log('Connected to MongoDB...');
 });
-
-
-let indexRouter = require('../routes/index');
-let usersRouter = require('../routes/users');
-let inventoryRouter = require('../routes/inventory');
-
 
 let app = express();
 
@@ -38,6 +32,10 @@ app.use(session({
   resave: true,
   secret: "sessionSecret"
 }));
+
+let indexRouter = require('../routes/index');
+let usersRouter = require('../routes/users');
+let inventoryRouter = require('../routes/inventory');
 
 // view engine setup
 app.set('views', path.join(__dirname, '../views'));
