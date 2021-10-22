@@ -17,7 +17,7 @@ let mongoose = require('mongoose')
 let dbURI = require('./db')
 
 //connect to the database
-mongoose.connect(dbURI.AtplasDB)
+mongoose.connect(dbURI.URI)
 
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error:'))
