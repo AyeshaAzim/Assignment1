@@ -4,7 +4,6 @@ let inventoryModel = mongoose.Schema(
     {
         name: String,
         contact: Number,
-        description: String,
         email: String
         
     },
