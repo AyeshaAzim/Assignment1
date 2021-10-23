@@ -9,6 +9,8 @@
         <br>
         <h4 style="font-family: 'papyrus'; text-align: center; color: white;">Be a part of my community!</h4>
     
+        <br>
+        <br>
         <div class="content" >
 
             <form class="form" method="POST">
@@ -50,8 +52,9 @@
                     placeholder="Enter your Email ID"
                     name="email" 
                     required>
-                    <%= name.email %>
-                    </textarea>
+                    <!-- <%= name.email %>
+                    </textarea> -->
+                    
                 </div>
 
                 <button class="btn btn-primary" type="submit">
@@ -59,7 +62,7 @@
                     Submit
                 </button>
 
-                <button class="btn btn-primary" type="submit">
+                <button class="btn btn-danger" type="submit">
                    <a href="/inventory/delete/<%= name._id%>"><i class="fas fa-edit"></i> Delete</a> 
                     
                 </button>
