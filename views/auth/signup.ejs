@@ -1,12 +1,18 @@
 
 <% include ../partials/header.ejs %>
 
+<!--Author Name: Ayesha Mohammed Azim
+Student number: 301166757
+Date: 23 October 2021
+File name: signup.ejs-->
+
 <div class="main_div" style="background-image:url(/Assets/images/img1.png); padding-bottom: 200px;">
     <div class="container_div">
         <div class="container_header"> 
             <h1>Sign-Up</h1>
             <h4 style=" font-family: 'papyrus'; font-weight: 700;text-align: center; color: #dfdfdf;">And become a part of my work community..</h4>
-
+            
+            <!-- main content of page -->
             <div class="content" >
                 <% for(var i in messages) { %>
                     <div class="flash" style="color: rgb(236, 135, 135);"><%= messages[i] %></div>

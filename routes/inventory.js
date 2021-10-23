@@ -28,7 +28,6 @@ router.post('/edit/:id', requireAuth, inventoryController.processEditPage);
 // Delete
 router.get('/delete/:id', requireAuth, inventoryController.performDelete);
 
-
 /* GET Route for displaying the Add page - CREATE Operation */
 router.get('/add', requireAuth, inventoryController.displayAddPage);
 

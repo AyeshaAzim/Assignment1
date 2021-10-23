@@ -2,6 +2,8 @@ let mongoose = require('mongoose');
 let crypto = require('crypto');
 let Schema = mongoose.Schema;
 
+//Schema for user database
+
 let UserSchema = mongoose.Schema(
     {
         firstName: String,

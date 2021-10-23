@@ -3,9 +3,8 @@
 let Inventory = require('../models/inventory');
 
 module.exports.inventoryList = function(req, res, next) {  
-    // Inventory.find((err, inventoryList) => {
     Inventory.find({}).sort({"name": 1}).exec((err, inventoryList) => {
-        // console.log(inventoryList);
+
         if(err)
         {
             return console.error(err);
@@ -21,6 +20,7 @@ module.exports.inventoryList = function(req, res, next) {
     });
 }
 
+//Displays edit page
 module.exports.displayEditPage = (req, res, next) => {
     let id = req.params.id;
 
@@ -41,8 +41,6 @@ module.exports.displayEditPage = (req, res, next) => {
         }
     });
 }
-
-
 module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id
 
@@ -50,11 +48,9 @@ module.exports.processEditPage = (req, res, next) => {
         _id: req.body.id,
         name: req.body.name,
         contact: req.body.contact,
-        description: req.body.description,        
+        //description: req.body.description,        
         email: req.body.email
     });
-
-    // console.log(updatedItem);
 
     Inventory.updateOne({_id: id}, updatedName, (err) => {
         if(err)
@@ -64,14 +60,12 @@ module.exports.processEditPage = (req, res, next) => {
         }
         else
         {
-            // console.log(req.body);
-            // refresh the book list
             res.redirect('/inventory/list');
         }
     });
 }
 
-
+//deletes an existing entry
 module.exports.performDelete = (req, res, next) => {
     let id = req.params.id;
 
@@ -83,13 +77,13 @@ module.exports.performDelete = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            // refresh the contact list
             res.redirect('/inventory/list');
         }
     });
 }
 
-
+//Navigates to add page
 module.exports.displayAddPage = (req, res, next) => {
     let newName = Inventory();
 
@@ -99,7 +93,7 @@ module.exports.displayAddPage = (req, res, next) => {
         userName: req.user ? req.user.username : ''
     })          
 }
-
+//processes the additions made
 module.exports.processAddPage = (req, res, next) => {
     let newName = Inventory({
         _id: req.body.id,
@@ -109,6 +103,7 @@ module.exports.processAddPage = (req, res, next) => {
         email: req.body.email
     });
 
+    //creates new entry
     Inventory.create(newName, (err, name) =>{
         if(err)
         {
@@ -117,7 +112,7 @@ module.exports.processAddPage = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            // refresh the contact list
             console.log(name);
             res.redirect('/inventory/list');
         }

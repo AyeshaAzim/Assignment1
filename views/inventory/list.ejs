@@ -1,13 +1,16 @@
 <%- include ../partials/header.ejs %>
 
-    <!-- <%= InventoryList %> -->
+<!--Author Name: Ayesha Mohammed Azim
+Student number: 301166757
+Date: 2 October 2021
+File name: list.ejs-->
+
     <div class="main_div" style="background-image:url(/Assets/images/img9.png); ">
         <div class="container_div" style="width: 80%;">
 
     <div class="container_header"> 
         <div class="row">
         <h1>Business Contact List</h1>
-        
         <br>
         <br>
         <br>
@@ -23,7 +26,6 @@
                 <tr style="font-weight: bold; color: white;">
                     <th class="text-center">Name</th>
                     <th class="text-center">Contact Number</th>
-                    <!-- <th class="text-center">Description</th> -->
                     <th class="text-center">Email</th>
                     <th class="text-center" colspan="2">Actions</th>
                 </tr>
@@ -34,8 +36,6 @@
                     <tr style="color: #FFBCBC;">
                         <td class="text-center"><%= InventoryList[count].name %></td>
                         <td class="text-center"><%= InventoryList[count].contact %></td>
-                        <!-- <td class="text-center"><%= InventoryList[count].description %></td> -->
-                        
                         <td class="text-center"><%= InventoryList[count].email %></td>
                         <td class="text-center">
                             <a href="/inventory/edit/<%= InventoryList[count]._id %>" class="btn btn-primary btn-sm">
@@ -49,13 +49,13 @@
                 <% } %>
             </table>
         </div>
-
         <!-- Customized footer -->
-     <div class="footer">
-        <footer>
-            <p>©Copyright2021 Ayesha Azim | 301166757 | Fall 2021 | Comp229</p>
-            <p><a href="https://www.instagram.com/ibm/?hl=en"><i class="fab fa-instagram"></i> </a>&nbsp; &nbsp;&nbsp; &nbsp;<a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.facebook.com/IBM/"><i class="fab fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/ayeshaazim/"><i class="fab fa-linkedin"></i></a></i></i></p>
-        </footer>
+        <div class="footer">
+            <footer>
+                <p>©Copyright2021 Ayesha Azim | 301166757 | Fall 2021 | Comp229</p>
+                <p><a href="https://www.instagram.com/ibm/?hl=en"><i class="fab fa-instagram"></i> </a>&nbsp; &nbsp;&nbsp; &nbsp;<a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.facebook.com/IBM/"><i class="fab fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/ayeshaazim/"><i class="fab fa-linkedin"></i></a></i></i></p>
+            </footer>
+        </div>
     </div>
 
   </main>

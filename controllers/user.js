@@ -1,6 +1,8 @@
 let User = require('../models/user');
 let passport = require('passport');
 
+
+//Authenticates and updates user creatioon
 function getErrorMessage(err) {
   console.log("===> Erro: " + err);
   let message = '';
@@ -23,6 +25,7 @@ function getErrorMessage(err) {
   return message;
 };
 
+//Navigates to sign in form
 module.exports.renderSignin = function(req, res, next) {
   if (!req.user) {
     res.render('auth/signin', {
