@@ -1,47 +1,43 @@
 <%- include ../partials/header.ejs %>
 
     <!-- <%= InventoryList %> -->
-    
-  <!-- Main Content -->
-  <main class="container">
-    <div class="row">
-        <h1><%= title %></h1>
+    <div class="main_div" style="background-image:url(/Assets/images/img9.png); ">
+        <div class="container_div" style="width: 80%;">
+
+    <div class="container_header"> 
+        <div class="row">
+        <h1> <%= title %></h1>
+        
         <br>
         <br>
         <br>
         <div>
-            <a href="/inventory/add" class="btn btn-primary align-self-end" role="button">
+            <a href="/inventory/add" class="btn btn-primary align-self-end" role="button" style="margin-left: 50px;">
                 <i class="fas fa-plus-circle"></i> 
-                Add a new Item
+                Add a new Business Contact
             </a>                
-        </div>
+
         <br>
-        <br>
-        <div class="table-responsive">
+        <div class="table-responsive" style="padding: 50px;">
             <table class="table table-bordered table-striped table-hover">
                 <!-- Header Row-->
-                <tr>
-                    <th class="text-center">Item</th>
-                    <th class="text-center">Qty</th>
-                    <th class="text-center">Status</th>
-                    <th>Size</th>
-                    <th class="text-center">Tags</th>
+                <tr style="font-weight: bold; color: white;">
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Contact Number</th>
+                    <th class="text-center">Description</th>
+                    <th class="text-center">Email</th>
                     <th class="text-center" colspan="2">Actions</th>
                 </tr>
 
                 <!-- Repeatable Template Row -->
 
                 <% for(let count = 0; count < InventoryList.length; count++) { %>
-                    <tr>
-                        <td class="text-center"><%= InventoryList[count].item %></td>
-                        <td class="text-center"><%= InventoryList[count].qty %></td>
-                        <td class="text-center"><%= InventoryList[count].status %></td>
-                        <td>
-                            Hight: <%= InventoryList[count].size.h %><br/>
-                            Width: <%= InventoryList[count].size.w %><br/>
-                            UOM: <%= InventoryList[count].size.uom %><br/>
-                        </td>
-                        <td class="text-center"><%= InventoryList[count].tags %></td>
+                    <tr style="color: #FFBCBC;">
+                        <td class="text-center"><%= InventoryList[count].name %></td>
+                        <td class="text-center"><%= InventoryList[count].contact %></td>
+                        <td class="text-center"><%= InventoryList[count].description %></td>
+                        
+                        <td class="text-center"><%= InventoryList[count].email %></td>
                         <td class="text-center">
                             <a href="/inventory/edit/<%= InventoryList[count]._id %>" class="btn btn-primary btn-sm">
                             <i class="fas fa-pencil-alt"></i></a>
@@ -54,7 +50,15 @@
                 <% } %>
             </table>
         </div>
+
+        <!-- Customized footer -->
+     <div class="footer">
+        <footer>
+            <p>©Copyright2021 Ayesha Azim | 301166757 | Fall 2021 | Comp229</p>
+            <p><a href="https://www.instagram.com/ibm/?hl=en"><i class="fab fa-instagram"></i> </a>&nbsp; &nbsp;&nbsp; &nbsp;<a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.facebook.com/IBM/"><i class="fab fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/ayeshaazim/"><i class="fab fa-linkedin"></i></a></i></i></p>
+        </footer>
     </div>
+
   </main>
 
 <%- include ../partials/footer.ejs %>

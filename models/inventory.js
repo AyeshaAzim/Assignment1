@@ -2,15 +2,17 @@ let mongoose = require('mongoose')
 
 let inventoryModel = mongoose.Schema(
     {
-        item: String,
-        qty: Number,
+        name: String,
+        contact: Number,
+        
         tags: [],
         status: String,
         size:{
             h: Number,
             w: Number,
             uom: String
-        }
+        },
+        email: String
         
     },
     {

@@ -23,7 +23,7 @@ module.exports.inventoryList = function(req, res, next) {
 module.exports.displayEditPage = (req, res, next) => {
     let id = req.params.id;
 
-    Inventory.findById(id, (err, itemToEdit) => {
+    Inventory.findById(id, (err, nameToEdit) => {
         if(err)
         {
             console.log(err);
@@ -33,8 +33,8 @@ module.exports.displayEditPage = (req, res, next) => {
         {
             //show the edit view
             res.render('inventory/add_edit', {
-                title: 'Edit Item', 
-                item: itemToEdit,
+                title: 'Edit Name', 
+                name: nameToEdit,
                 userName: req.user ? req.user.username : ''
             })
         }
@@ -45,22 +45,17 @@ module.exports.displayEditPage = (req, res, next) => {
 module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id
 
-    let updatedItem = Inventory({
+    let updatedName = Inventory({
         _id: req.body.id,
-        item: req.body.item,
-        qty: req.body.qty,
-        status: req.body.status,
-        size : {
-            h: req.body.size_h,
-            w: req.body.size_w,
-            uom: req.body.size_uom,
-        },
-        tags: req.body.tags.split(",").map(word => word.trim())
+        name: req.body.name,
+        contact: req.body.contact,
+        description: req.body.description,        
+        email: req.body.email
     });
 
     // console.log(updatedItem);
 
-    Inventory.updateOne({_id: id}, updatedItem, (err) => {
+    Inventory.updateOne({_id: id}, updatedName, (err) => {
         if(err)
         {
             console.log(err);
@@ -95,30 +90,25 @@ module.exports.performDelete = (req, res, next) => {
 
 
 module.exports.displayAddPage = (req, res, next) => {
-    let newItem = Inventory();
+    let newName = Inventory();
 
     res.render('inventory/add_edit', {
-        title: 'Add a new Item',
-        item: newItem,
+        title: 'Add a new Name',
+        name: newName,
         userName: req.user ? req.user.username : ''
     })          
 }
 
 module.exports.processAddPage = (req, res, next) => {
-    let newItem = Inventory({
+    let newName = Inventory({
         _id: req.body.id,
-        item: req.body.item,
-        qty: req.body.qty,
-        status: req.body.status,
-        size : {
-            h: req.body.size_h,
-            w: req.body.size_w,
-            uom: req.body.size_uom,
-        },
-        tags: req.body.tags.split(",").map(word => word.trim())
+        name: req.body.name,
+        contact: req.body.contact,
+        description: req.body.description,
+        email: req.body.email
     });
 
-    Inventory.create(newItem, (err, item) =>{
+    Inventory.create(newName, (err, name) =>{
         if(err)
         {
             console.log(err);
@@ -127,7 +117,7 @@ module.exports.processAddPage = (req, res, next) => {
         else
         {
             // refresh the book list
-            console.log(item);
+            console.log(name);
             res.redirect('/inventory/list');
         }
     });
