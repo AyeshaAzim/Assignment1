@@ -1,38 +1,33 @@
 <% include ../partials/header.ejs %>
 
-<div class="container">
-    <div class="row">
+<div class="main_div" style="background-image:url(/Assets/images/img1.png); padding-bottom: 200px;">
+    <div class="container_div">
+        <div class="container_header"> 
+            <h1>Sign-In</h1>
 
-        <div class="offset-md-3 col-md-3">
-            <h1><%= title %></h1>
-            <% for(var i in messages) { %>
-                <div class="flash"><%= messages[i] %></div>
-            <% } %>
-            <form action="/users/signin" method="post">
-                <div class="form-group">
-                    <label>Username:</label>
-                    <input type="text" name="username" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label>Password:</label>
-                    <input type="password" name="password" class="form-control"/>
-                </div>
-                <br>
-                <div class="form-group">
-                    <input class="btn btn-primary" type="submit" value="Sign In" />                    
-                </div>
-                <br>
-                <div class="form-group">
-                    <a href="/users/signup" style="text-decoration: none; color: black;">                
-                        <i class="fas fa-user-plus"></i> 
-                        Signup
+            <div class="content" >
+                <% for(var i in messages) { %>
+                    <div class="flash" style="color: rgb(236, 135, 135);"><%= messages[i] %></div>
+                <% } %>  
+                <form action="/users/signin" method="post">
+                    <input type="text" name="username" class="form-control" placeholder="Enter your username:" />
+                    <input type="password" name="password" class="form-control" placeholder="Enter your password:"/>
+                    <button type="submit"id="Submit" value="Sign In">Sign-In</button>               
+                    <a href="/users/signup" style="font-weight: bold; font-size: medium;">                
+                        <i class="fas fa-user-plus"></i> Signup
                     </a>
+                </form>
+                <br>
+                 <!-- Customized footer -->
+                 <div class="footer">
+                    <footer>
+                        <p>©Copyright2021 Ayesha Azim | 301166757 | Fall 2021 | Comp229<br>
+                        <a href="https://www.instagram.com/ibm/?hl=en"><i class="fab fa-instagram"></i> </a>&nbsp; &nbsp;&nbsp; &nbsp;<a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.facebook.com/IBM/"><i class="fab fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/ayeshaazim/"><i class="fab fa-linkedin"></i></a></i></i></p>
+                    </footer>
                 </div>
-            </form>
-        </div>
-        <div>
-                        
+            </div>
         </div>
     </div>
 </div>
+
 <% include ../partials/footer.ejs %>

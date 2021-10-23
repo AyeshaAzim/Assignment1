@@ -8,7 +8,7 @@ let UserSchema = mongoose.Schema(
         lastName: String,
         email: {
             type: String,
-            match: [/.+\@.+\..+/, "Please fill a valid e-mail address"]
+            match: [/.+\@.+\..+/, "Please enter a valid e-mail address"]
         },
         username: {
             type: String,
@@ -20,7 +20,7 @@ let UserSchema = mongoose.Schema(
             type: String,
             validate: [(password) => {
                 return password && password.length > 6;
-            }, 'Password should be longer']
+            }, 'Password should be atleast 6 charecters long!']
         },
         salt: {
             type: String

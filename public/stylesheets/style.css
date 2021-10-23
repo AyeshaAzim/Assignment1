@@ -15,6 +15,8 @@ File name: style.css
   display:flex;
   align-items:center;
   justify-content:center;
+  padding-bottom:100px;
+  padding-top: 100px;
 }
 
 .container_div{
@@ -133,7 +135,7 @@ button{
   margin:10px auto;
   display:block;
   transition: all 0.5s ease;
-  height: 2.5vw;
+  height: 9%;
 }
 button:hover{
   color:black;
@@ -147,6 +149,9 @@ a {
   color: white;
   background-color: transparent;
   text-decoration: none;
+}
+a:hover{
+  color: #FFBCBC;
 }
 
 /* Styling unorder lists */

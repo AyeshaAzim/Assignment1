@@ -1,22 +1,15 @@
 <%- include ../partials/header.ejs %>
 
-<div class="main_div" style="background-image:url(/Assets/images/img9.png); ">
+<div class="main_div" style="background-image:url(/Assets/images/img9.png);">
     <div class="container_div">
+        <div class="container_header"> 
+            <br>
 
-<!-- <div class="main_div" style="background-image: url(../Assets/images/img9.png)"> -->
-
-    <div class="container_header"> 
-        <div class="row">
-            <div class="offset-md-3 col-md-6">
         <h2 style="font-family: 'papyrus'; text-align: center; color: white; text-decoration: none;">Add/Edit Business Contact List!</h2>
         <br>
         <h4 style="font-family: 'papyrus'; text-align: center; color: white;">Be a part of my community!</h4>
     
-<!-- Content for the Add_Edit page -->
-<!-- <div class="container" >
-    <div class="row">
-        <div class="offset-md-3 col-md-6">
-            <h1><%= title %></h1> -->
+        <div class="content" >
 
             <form class="form" method="POST">
                 <div class="form-group">
@@ -32,7 +25,6 @@
                         value="<%= name.name %>"
                         required>
                 </div>
-                <br />
                 <div class="form-group">
                     <!-- <label for="QtyTextField">Contact number</label> -->
                     <input type="tel" class="form-control"
@@ -42,9 +34,7 @@
                     value="<%= name.contact %>"
                     required>
                 </div>
-                <br />
                 <div class="form-group">
-                    <!-- <label for="statusTextField">Description</label> -->
                     <input type="text" class="form-control"
                     id="statusTextField"
                     placeholder="Enter a Description"
@@ -53,7 +43,6 @@
                     >
                 </div>
               
-                <br />
                 <div class="form-group">
                     <!-- <label for="emailTextArea">Email</label> -->
                     <input type="email" class="form-control"
@@ -64,17 +53,16 @@
                     <%= name.email %>
                     </textarea>
                 </div>
-                <br/>
 
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> 
                     Submit
                 </button>
 
-                <button class="btn btn-danger btn-sm">
+                <!-- <button class="btn btn-danger btn-sm">
                     <i class="fas fa-trash-alt"></i>
                     Delete 
-                </button>
+                </button> -->
                 
                     <a href="/inventory/list" class="btn btn-warning">
                         <i class="fas fa-undo"></i> 

@@ -3,7 +3,8 @@
 let Inventory = require('../models/inventory');
 
 module.exports.inventoryList = function(req, res, next) {  
-    Inventory.find((err, inventoryList) => {
+    // Inventory.find((err, inventoryList) => {
+    Inventory.find({}).sort({"name": 1}).exec((err, inventoryList) => {
         // console.log(inventoryList);
         if(err)
         {
